@@ -9,16 +9,19 @@
             <div class="top-header-content d-flex align-items-center justify-content-between">
               <!-- Logo -->
               <div class="logo">
-                <nuxt-link to="/"><img src="img/core-img/logo.png" alt=""></nuxt-link>
+                <nuxt-link to="/">
+                  <!--<img src="img/core-img/logo.png" alt="">-->
+                  <h2 class="nav-title">Npj News Portal</h2>
+                </nuxt-link>
               </div>
 
               <!-- Login Search Area -->
               <div class="login-search-area d-flex align-items-center">
                 <!-- Login -->
-                <div class="login d-flex">
-                  <a href="#">Login</a>
-                  <a href="#">Register</a>
-                </div>
+                <!--<div class="login d-flex">-->
+                  <!--<a href="#">Login</a>-->
+                  <!--<a href="#">Register</a>-->
+                <!--</div>-->
                 <!-- Search Form -->
                 <div class="search-form">
                   <form action="#" method="post">
@@ -61,21 +64,44 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul>
-                  <li class="active"><nuxt-link to="/">Home</nuxt-link></li>
+                  <li class="active">
+                    <nuxt-link to="/">Home</nuxt-link>
+                  </li>
                   <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                      <li><nuxt-link to="/">Home</nuxt-link></li>
-                      <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
-                      <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
-                      <li><nuxt-link to="/about">About Us</nuxt-link></li>
-                      <li><nuxt-link to="/contact">Contact</nuxt-link></li>
-                      <li><nuxt-link to="#">Dropdown</nuxt-link>
+                      <li>
+                        <nuxt-link to="/">Home</nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link to="/single-post">Single Articles</nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link to="/about">About Us</nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link to="/contact">Contact</nuxt-link>
+                      </li>
+                      <li>
+                        <nuxt-link to="#">Dropdown</nuxt-link>
                         <ul class="dropdown">
-                          <li><nuxt-link to="/">Home</nuxt-link></li>
-                          <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
-                          <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
-                          <li><nuxt-link to="/about">About Us</nuxt-link></li>
-                          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                          <li>
+                            <nuxt-link to="/">Home</nuxt-link>
+                          </li>
+                          <li>
+                            <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                          </li>
+                          <li>
+                            <nuxt-link to="/single-post">Single Articles</nuxt-link>
+                          </li>
+                          <li>
+                            <nuxt-link to="/about">About Us</nuxt-link>
+                          </li>
+                          <li>
+                            <nuxt-link to="/contact">Contact</nuxt-link>
+                          </li>
                         </ul>
                       </li>
                     </ul>
@@ -84,27 +110,57 @@
                     <div class="megamenu">
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><nuxt-link to="/">Home</nuxt-link></li>
-                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
-                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
-                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
-                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                        <li>
+                          <nuxt-link to="/">Home</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/single-post">Single Articles</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/about">About Us</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/contact">Contact</nuxt-link>
+                        </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><nuxt-link to="/">Home</nuxt-link></li>
-                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
-                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
-                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
-                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                        <li>
+                          <nuxt-link to="/">Home</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/single-post">Single Articles</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/about">About Us</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/contact">Contact</nuxt-link>
+                        </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><nuxt-link to="/">Home</nuxt-link></li>
-                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
-                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
-                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
-                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                        <li>
+                          <nuxt-link to="/">Home</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/single-post">Single Articles</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/about">About Us</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/contact">Contact</nuxt-link>
+                        </li>
                       </ul>
                       <div class="single-mega cn-col-4">
                         <!-- Single Featured Post -->
@@ -148,7 +204,9 @@
                   <li><a href="#">Health</a></li>
                   <li><a href="#">Travel</a></li>
                   <li><a href="#">Sports</a></li>
-                  <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                  <li>
+                    <nuxt-link to="/contact">Contact</nuxt-link>
+                  </li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -164,3 +222,9 @@
     name: 'Navbar'
   }
 </script>
+<style>
+  .nav-title{
+    color: #fff;
+    font-weight:bold;
+  }
+</style>
