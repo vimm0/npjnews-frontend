@@ -7,33 +7,57 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'News Paper - News & Lifestyle Magazine',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      // {name:"viewport", content:"width=device-width, initial-scale=1, shrink-to-fit=no"},
+      {hid: 'description', name: 'description', content: pkg.description}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'stylesheet', href: '/style.css'},
     ]
   },
-
+  script: [
+    // {
+    //   type: 'text/javascript',
+    //   src: "js/jquery/jquery-2.2.4.min.js",
+    //   body: true
+    // },
+    // {
+    //   src: "js/bootstrap/popper.min.js",
+    //   body: true
+    // },
+    // {
+    //   src: "js/bootstrap/bootstrap.min.js",
+    //   body: true
+    // },
+    // {
+    //   type: 'text/javascript',
+    //   src: "js/plugins/plugins.js",
+    //   body: true
+    // },
+    // {
+    //   type: 'text/javascript',
+    //   src: "js/active.js",
+    //   body: true
+    // },
+  ],
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {color: '#fff'},
 
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -42,8 +66,16 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    // 'vue-meta'
   ],
+  metaInfo: {
+    bodyScript: [
+      {src: 'js/plugins/plugins.js'},
+      {src: 'js/active.js'},
+      {src: 'js/jquery/jquery-2.2.4.min.js'},
+    ]
+  },
   /*
   ** Axios module configuration
   */
@@ -59,7 +91,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
