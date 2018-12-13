@@ -9,7 +9,7 @@
             <div class="top-header-content d-flex align-items-center justify-content-between">
               <!-- Logo -->
               <div class="logo">
-                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <nuxt-link to="/"><img src="img/core-img/logo.png" alt=""></nuxt-link>
               </div>
 
               <!-- Login Search Area -->
@@ -42,7 +42,7 @@
 
             <!-- Logo -->
             <div class="logo">
-              <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+              <nuxt-link to="/"><img src="img/core-img/logo.png" alt=""></nuxt-link>
             </div>
 
             <!-- Navbar Toggler -->
@@ -61,21 +61,21 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul>
-                  <li class="active"><a href="/index">Home</a></li>
+                  <li class="active"><nuxt-link to="/">Home</nuxt-link></li>
                   <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                      <li><a href="/index">Home</a></li>
-                      <li><a href="/catagories-post">Catagories</a></li>
-                      <li><a href="/single-post">Single Articles</a></li>
-                      <li><a href="/about">About Us</a></li>
-                      <li><a href="/contact">Contact</a></li>
-                      <li><a href="#">Dropdown</a>
+                      <li><nuxt-link to="/">Home</nuxt-link></li>
+                      <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
+                      <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
+                      <li><nuxt-link to="/about">About Us</nuxt-link></li>
+                      <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+                      <li><nuxt-link to="#">Dropdown</nuxt-link>
                         <ul class="dropdown">
-                          <li><a href="/index">Home</a></li>
-                          <li><a href="/catagories-post">Catagories</a></li>
-                          <li><a href="/single-post">Single Articles</a></li>
-                          <li><a href="/about">About Us</a></li>
-                          <li><a href="/contact">Contact</a></li>
+                          <li><nuxt-link to="/">Home</nuxt-link></li>
+                          <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
+                          <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
+                          <li><nuxt-link to="/about">About Us</nuxt-link></li>
+                          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
                         </ul>
                       </li>
                     </ul>
@@ -84,27 +84,27 @@
                     <div class="megamenu">
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="catagories-post.html">Catagories</a></li>
-                        <li><a href="single-post.html">Single Articles</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><nuxt-link to="/">Home</nuxt-link></li>
+                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
+                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
+                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
+                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="catagories-post.html">Catagories</a></li>
-                        <li><a href="single-post.html">Single Articles</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><nuxt-link to="/">Home</nuxt-link></li>
+                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
+                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
+                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
+                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Catagories</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="catagories-post.html">Catagories</a></li>
-                        <li><a href="single-post.html">Single Articles</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><nuxt-link to="/">Home</nuxt-link></li>
+                        <li><nuxt-link to="/catagories-post">Catagories</nuxt-link></li>
+                        <li><nuxt-link to="/single-post">Single Articles</nuxt-link></li>
+                        <li><nuxt-link to="/about">About Us</nuxt-link></li>
+                        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
                       </ul>
                       <div class="single-mega cn-col-4">
                         <!-- Single Featured Post -->
@@ -148,7 +148,7 @@
                   <li><a href="#">Health</a></li>
                   <li><a href="#">Travel</a></li>
                   <li><a href="#">Sports</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><nuxt-link to="/contact">Contact</nuxt-link></li>
                 </ul>
               </div>
               <!-- Nav End -->

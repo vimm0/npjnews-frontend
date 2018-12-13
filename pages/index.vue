@@ -12,7 +12,7 @@
               <div id="breakingNewsTicker" class="ticker">
                 <ul>
                   <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                  <li><a href="#">Welcome to Colorlib Family.</a></li>
+                  <li><a href="#">Welcome to Nepexgroup Family.</a></li>
                   <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
                 </ul>
               </div>
@@ -26,7 +26,7 @@
               <div id="internationalTicker" class="ticker">
                 <ul>
                   <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                  <li><a href="#">Welcome to Colorlib Family.</a></li>
+                  <li><a href="#">Welcome to Nepexgroup Family.</a></li>
                   <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
                 </ul>
               </div>
