@@ -627,33 +627,7 @@
   import Logo from '~/components/Logo.vue'
 
   export default {
-    head() {
-      return {
-        script: [
-          // {
-          //   type: 'text/javascript',
-          //   src: "js/jquery/jquery-2.2.4.min.js"
-          // },
-          // {
-          //   src: "js/bootstrap/popper.min.js"
-          // },
-          // {
-          //   src: "js/bootstrap/bootstrap.min.js"
-          // },
-          // {
-          //   type: 'text/javascript',
-          //   src: "js/plugins/plugins.js"
-          // },
-          // {
-          //   type: 'text/javascript',
-          //   src: "js/active.js"
-          // },
-        ],
-        link: [
-          // {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto'}
-        ]
-      }
-    },
+
     components: {
       Logo
     }

@@ -69,13 +69,13 @@ module.exports = {
     'bootstrap-vue/nuxt',
     // 'vue-meta'
   ],
-  metaInfo: {
-    bodyScript: [
-      {src: 'js/plugins/plugins.js'},
-      {src: 'js/active.js'},
-      {src: 'js/jquery/jquery-2.2.4.min.js'},
-    ]
-  },
+  // metaInfo: {
+  //   bodyScript: [
+  //     {src: 'js/plugins/plugins.js'},
+  //     {src: 'js/active.js'},
+  //     {src: 'js/jquery/jquery-2.2.4.min.js'},
+  //   ]
+  // },
   /*
   ** Axios module configuration
   */
