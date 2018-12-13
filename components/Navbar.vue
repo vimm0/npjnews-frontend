@@ -61,21 +61,21 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li class="active"><a href="/index">Home</a></li>
                   <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="catagories-post.html">Catagories</a></li>
-                      <li><a href="single-post.html">Single Articles</a></li>
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="/index">Home</a></li>
+                      <li><a href="/catagories-post">Catagories</a></li>
+                      <li><a href="/single-post">Single Articles</a></li>
+                      <li><a href="/about">About Us</a></li>
+                      <li><a href="/contact">Contact</a></li>
                       <li><a href="#">Dropdown</a>
                         <ul class="dropdown">
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="catagories-post.html">Catagories</a></li>
-                          <li><a href="single-post.html">Single Articles</a></li>
-                          <li><a href="about.html">About Us</a></li>
-                          <li><a href="contact.html">Contact</a></li>
+                          <li><a href="/index">Home</a></li>
+                          <li><a href="/catagories-post">Catagories</a></li>
+                          <li><a href="/single-post">Single Articles</a></li>
+                          <li><a href="/about">About Us</a></li>
+                          <li><a href="/contact">Contact</a></li>
                         </ul>
                       </li>
                     </ul>
