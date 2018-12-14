@@ -11,9 +11,7 @@
               </div>
               <div id="breakingNewsTicker" class="ticker">
                 <ul>
-                  <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                  <li><a href="#">Welcome to Nepexgroup Family.</a></li>
-                  <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
+                  <li v-for="news in $store.state.breakingNews"><a href="#">{{ news.title }}</a></li>
                 </ul>
               </div>
             </div>
@@ -25,9 +23,7 @@
               </div>
               <div id="internationalTicker" class="ticker">
                 <ul>
-                  <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                  <li><a href="#">Welcome to Nepexgroup Family.</a></li>
-                  <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
+                  <li v-for="news in $store.state.internationalNews"><a href="#">{{news.title}}</a></li>
                 </ul>
               </div>
             </div>
@@ -630,8 +626,12 @@
     async asyncData({store, params}) {
       let {data} = await api.get("article/");
       let cat = await api.get("category")
+      let internationalNews = await api.get("article/international_news")
+      let breakingNews = await api.get("article/breaking_news")
       store.commit('addArticle', data)
       store.commit('addCategories', cat.data)
+      store.commit('addInternationalNews', internationalNews.data)
+      store.commit('addBreakingNews', breakingNews.data)
       return {article: data, categories: cat.data};
     },
     components: {

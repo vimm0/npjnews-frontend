@@ -4,7 +4,9 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       article: '',
-      categories: ''
+      categories: '',
+      internationalNews: '',
+      breakingNews: '',
     },
     mutations: {
       addArticle(state, payload) {
@@ -12,6 +14,12 @@ const createStore = () => {
       },
       addCategories(state, payload) {
         state.categories = payload
+      },
+       addInternationalNews(state, payload) {
+        state.internationalNews = payload
+      },
+      addBreakingNews(state, payload) {
+        state.breakingNews = payload
       }
     },
     // actions: {},
