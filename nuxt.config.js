@@ -31,6 +31,9 @@ module.exports = {
     },
     script: [
       // {
+      //   src: 'https://code.jquery.com/jquery-3.1.1.slim.min.js'
+      // },
+      // {
       //   type: 'text/javascript',
       //   src: "/js/jquery/jquery-2.2.4.min.js"
       // },
@@ -70,7 +73,6 @@ module.exports = {
   */
   plugins: [
     {src: '~/plugins/axios.js'},
-    // {src: '~/static/js/jquery/jquery-2.2.4.min.js', ssr: true},
   ],
   env: {
     API_URL: isDev ? 'http://127.0.0.1:8000/' : 'https://npjnewsportal.com/'
@@ -79,19 +81,9 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    // 'vue-meta'
   ],
-  // metaInfo: {
-  //   bodyScript: [
-  //     {src: 'js/plugins/plugins.js'},
-  //     {src: 'js/active.js'},
-  //     {src: 'js/jquery/jquery-2.2.4.min.js'},
-  //   ]
-  // },
   /*
   ** Axios module configuration
   */

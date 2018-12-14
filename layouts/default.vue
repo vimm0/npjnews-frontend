@@ -3,12 +3,14 @@
     <Navbar></Navbar>
     <nuxt/>
     <!--<Footer></Footer>-->
-    <!--The client-side rendered virtual DOM tree is not matching server-rendered content.-->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <script src="js/bootstrap/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/plugins/plugins.js"></script>
-    <script src="js/active.js"></script>
+    <!--&lt;!&ndash;The client-side rendered virtual DOM tree is not matching server-rendered content.&ndash;&gt;-->
+    <no-ssr>
+      <script src="js/jquery/jquery-2.2.4.min.js"></script>
+      <script src="js/bootstrap/popper.min.js"></script>
+      <script src="js/bootstrap/bootstrap.min.js"></script>
+      <script src="js/plugins/plugins.js"></script>
+      <script src="js/active.js"></script>
+    </no-ssr>
   </div>
 </template>
 <script>
@@ -21,13 +23,6 @@
     },
     head: {
       titleTemplate: '%s - Nepex',
-      // metaInfo: {
-      //   bodyScript: [
-      //     {src: "/js/jquery/jquery-2.2.4.min.js"},
-      //     {src: "/js/plugins/plugins.js"},
-      //     {src: "/js/active.js"},
-      //   ]
-      // },
     },
     components: {
       Navbar,
