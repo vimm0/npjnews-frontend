@@ -46,17 +46,18 @@
 
               <!-- Single Featured Post -->
               <div class="col-12 col-lg-7">
-                <div class="single-blog-post featured-post">
+                <div class="single-blog-post featured-post"
+                     v-for="(article, index) in $store.state.articles.slice(3,4)">
                   <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/16.jpg" alt=""></a>
+                    <a href="#"><img :src="`img/bg-img/${16+index}.jpg`" alt=""></a>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
+                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{cat_title}}</a>
                     <a href="#" class="post-title">
-                      <h6>Financial news: A new company is born today at the stock market</h6>
+                      <h6>{{article.title}}</h6>
                     </a>
                     <div class="post-meta">
-                      <p class="post-author">By <a href="#">Christinne Williams</a></p>
+                      <p class="post-author">By <a href="#">{{article.reporter}}</a></p>
                       <p class="post-excerp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit
                         amet odio sodales placerat. Sed varius leo ac leo fermentum, eu cursus nunc maximus. Integer
                         convallis nisi nibh, et ornare neque ullamcorper ac. Nam id congue lectus, a venenatis massa.
@@ -73,37 +74,16 @@
 
               <div class="col-12 col-lg-5">
                 <!-- Single Featured Post -->
-                <div class="single-blog-post featured-post-2">
+                <div class="single-blog-post featured-post-2"
+                     v-for="(article, index) in $store.state.articles.slice(0,2)">
                   <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/17.jpg" alt=""></a>
+                    <a href="#"><img :src="`img/bg-img/${17+index}.jpg`" alt=""></a>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
+                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
                     <div class="post-meta">
                       <a href="#" class="post-title">
-                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales
-                          placerat. Sed varius leo ac...</h6>
-                      </a>
-                      <!-- Post Like & Post Comment -->
-                      <div class="d-flex align-items-center">
-                        <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                        <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post featured-post-2">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/18.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
-                    <div class="post-meta">
-                      <a href="#" class="post-title">
-                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales
-                          placerat. Sed varius leo ac...</h6>
+                        <h6>{{article.title}}</h6>
                       </a>
                       <!-- Post Like & Post Comment -->
                       <div class="d-flex align-items-center">
@@ -119,96 +99,17 @@
 
           <div class="col-12 col-md-6 col-lg-4">
             <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
+            <div class="single-blog-post small-featured-post d-flex" v-for="(article, index) in $store.state.articles">
               <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/19.jpg" alt=""></a>
+                <a href="#"><img :src="`img/bg-img/${19+index}.jpg`" alt=""></a>
               </div>
               <div class="post-data">
-                <a href="#" class="post-catagory">Finance</a>
+                <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
                 <div class="post-meta">
                   <a href="#" class="post-title">
-                    <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
+                    <h6>{{ article.title }}</h6>
                   </a>
-                  <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/20.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-catagory">Politics</a>
-                <div class="post-meta">
-                  <a href="#" class="post-title">
-                    <h6>Sed a elit euismod augue semper congue sit amet ac sapien.</h6>
-                  </a>
-                  <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/21.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-catagory">Health</a>
-                <div class="post-meta">
-                  <a href="#" class="post-title">
-                    <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                  </a>
-                  <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/22.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-catagory">Finance</a>
-                <div class="post-meta">
-                  <a href="#" class="post-title">
-                    <h6>Augue semper congue sit amet ac sapien. Fusce consequat.</h6>
-                  </a>
-                  <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/23.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-catagory">Travel</a>
-                <div class="post-meta">
-                  <a href="#" class="post-title">
-                    <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                  </a>
-                  <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Featured Post -->
-            <div class="single-blog-post small-featured-post d-flex">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/24.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-catagory">Politics</a>
-                <div class="post-meta">
-                  <a href="#" class="post-title">
-                    <h6>Augue semper congue sit amet ac sapien. Fusce consequat.</h6>
-                  </a>
+                  <!--<p class="post-date">{{ new Date(article.created) }}</p>-->
                   <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
                 </div>
               </div>
@@ -226,78 +127,16 @@
             </div>
 
             <div class="row">
-
               <!-- Single Post -->
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6" v-for="(article, index) in $store.state.articles.slice(0,4)">
                 <div class="single-blog-post style-3">
                   <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/12.jpg" alt=""></a>
+                    <a href="#"><img :src="`img/bg-img/${12 + index}.jpg`" alt=""></a>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
+                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
                     <a href="#" class="post-title">
-                      <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed
-                        varius leo ac...</h6>
-                    </a>
-                    <div class="post-meta d-flex align-items-center">
-                      <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                      <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-md-6">
-                <div class="single-blog-post style-3">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/13.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
-                    <a href="#" class="post-title">
-                      <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed
-                        varius leo ac...</h6>
-                    </a>
-                    <div class="post-meta d-flex align-items-center">
-                      <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                      <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-md-6">
-                <div class="single-blog-post style-3">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/14.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
-                    <a href="#" class="post-title">
-                      <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed
-                        varius leo ac...</h6>
-                    </a>
-                    <div class="post-meta d-flex align-items-center">
-                      <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                      <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-md-6">
-                <div class="single-blog-post style-3">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/15.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-catagory">Finance</a>
-                    <a href="#" class="post-title">
-                      <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed
-                        varius leo ac...</h6>
+                      <h6>{{ article.title }}</h6>
                     </a>
                     <div class="post-meta d-flex align-items-center">
                       <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
@@ -318,33 +157,9 @@
               <h3>4 Most Popular News</h3>
 
               <!-- Single Popular Blog -->
-              <div class="single-popular-post">
+              <div class="single-popular-post" v-for="(article, index) in $store.state.articles.slice(0,4)">
                 <a href="#">
-                  <h6><span>1.</span> Amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales.</h6>
-                </a>
-                <p>April 14, 2018</p>
-              </div>
-
-              <!-- Single Popular Blog -->
-              <div class="single-popular-post">
-                <a href="#">
-                  <h6><span>2.</span> Consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer.</h6>
-                </a>
-                <p>April 14, 2018</p>
-              </div>
-
-              <!-- Single Popular Blog -->
-              <div class="single-popular-post">
-                <a href="#">
-                  <h6><span>3.</span> Adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo.</h6>
-                </a>
-                <p>April 14, 2018</p>
-              </div>
-
-              <!-- Single Popular Blog -->
-              <div class="single-popular-post">
-                <a href="#">
-                  <h6><span>4.</span> Eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
+                  <h6><span>{{ `${index+1}` }}</span>{{article.title}}</h6>
                 </a>
                 <p>April 14, 2018</p>
               </div>
@@ -413,103 +228,16 @@
             <div class="section-heading">
               <h6>Editor’s Pick</h6>
             </div>
-
             <div class="row">
-
               <!-- Single Post -->
-              <div class="col-12 col-lg-4">
+              <div class="col-12 col-lg-4" v-for="(article, index) in $store.state.articles">
                 <div class="single-blog-post">
                   <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/1.jpg" alt=""></a>
+                    <a href="#"><img :src="`img/bg-img/${1 + index}.jpg`" alt=""></a>
                   </div>
                   <div class="post-data">
                     <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
-                    </a>
-                    <div class="post-meta">
-                      <div class="post-date"><a href="#">February 11, 2018</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-lg-4">
-                <div class="single-blog-post">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/2.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
-                    </a>
-                    <div class="post-meta">
-                      <div class="post-date"><a href="#">February 11, 2018</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-lg-4">
-                <div class="single-blog-post">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/3.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
-                    </a>
-                    <div class="post-meta">
-                      <div class="post-date"><a href="#">February 11, 2018</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-lg-4">
-                <div class="single-blog-post">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/4.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
-                    </a>
-                    <div class="post-meta">
-                      <div class="post-date"><a href="#">February 11, 2018</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-lg-4">
-                <div class="single-blog-post">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/5.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
-                    </a>
-                    <div class="post-meta">
-                      <div class="post-date"><a href="#">February 11, 2018</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Post -->
-              <div class="col-12 col-lg-4">
-                <div class="single-blog-post">
-                  <div class="post-thumb">
-                    <a href="#"><img src="img/bg-img/6.jpg" alt=""></a>
-                  </div>
-                  <div class="post-data">
-                    <a href="#" class="post-title">
-                      <h6>Orci varius natoque penatibus et magnis dis parturient montes.</h6>
+                      <h6>{{article.title}}</h6>
                     </a>
                     <div class="post-meta">
                       <div class="post-date"><a href="#">February 11, 2018</a></div>
@@ -527,80 +255,19 @@
             </div>
 
             <!-- Single Post -->
-            <div class="single-blog-post style-2">
+            <div class="single-blog-post style-2" v-for="(article, index) in $store.state.articles.slice(0,5)">
               <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/7.jpg" alt=""></a>
+                <a href="#"><img :src="`img/bg-img/${7 + index}.jpg`" alt=""></a>
               </div>
               <div class="post-data">
                 <a href="#" class="post-title">
-                  <h6>Orci varius natoque penatibus et magnis</h6>
+                  <h6>{{article.title}}</h6>
                 </a>
                 <div class="post-meta">
                   <div class="post-date"><a href="#">February 11, 2018</a></div>
                 </div>
               </div>
             </div>
-
-            <!-- Single Post -->
-            <div class="single-blog-post style-2">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/8.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-title">
-                  <h6>Orci varius natoque penatibus et magnis</h6>
-                </a>
-                <div class="post-meta">
-                  <div class="post-date"><a href="#">February 11, 2018</a></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Post -->
-            <div class="single-blog-post style-2">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/9.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-title">
-                  <h6>Orci varius natoque penatibus et magnis</h6>
-                </a>
-                <div class="post-meta">
-                  <div class="post-date"><a href="#">February 11, 2018</a></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Post -->
-            <div class="single-blog-post style-2">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/10.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-title">
-                  <h6>Orci varius natoque penatibus et magnis</h6>
-                </a>
-                <div class="post-meta">
-                  <div class="post-date"><a href="#">February 11, 2018</a></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single Post -->
-            <div class="single-blog-post style-2">
-              <div class="post-thumb">
-                <a href="#"><img src="img/bg-img/11.jpg" alt=""></a>
-              </div>
-              <div class="post-data">
-                <a href="#" class="post-title">
-                  <h6>Orci varius natoque penatibus et magnis</h6>
-                </a>
-                <div class="post-meta">
-                  <div class="post-date"><a href="#">February 11, 2018</a></div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -621,6 +288,7 @@
 
 <script>
   import Logo from '~/components/Logo.vue'
+  import axios from 'axios'
 
   export default {
     async asyncData({store, params}) {
@@ -633,6 +301,14 @@
       store.commit('addInternationalNews', internationalNews.data)
       store.commit('addBreakingNews', breakingNews.data)
       return {article: data, categories: cat.data};
+    },
+    created() {
+      let url = "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=a9eac86b961ece1768b402204cc02d63";
+      axios
+        .get(url)
+        .then(response => {
+          console.log(response)
+        })
     },
     components: {
       Logo

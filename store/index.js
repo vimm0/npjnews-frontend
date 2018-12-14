@@ -3,14 +3,14 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      article: '',
+      articles: '',
       categories: '',
       internationalNews: '',
       breakingNews: '',
     },
     mutations: {
       addArticle(state, payload) {
-        state.article = payload
+        state.articles = payload
       },
       addCategories(state, payload) {
         state.categories = payload
