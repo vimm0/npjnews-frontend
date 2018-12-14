@@ -19,8 +19,8 @@
               <div class="login-search-area d-flex align-items-center">
                 <!-- Login -->
                 <!--<div class="login d-flex">-->
-                  <!--<a href="#">Login</a>-->
-                  <!--<a href="#">Register</a>-->
+                <!--<a href="#">Login</a>-->
+                <!--<a href="#">Register</a>-->
                 <!--</div>-->
                 <!-- Search Form -->
                 <div class="search-form">
@@ -73,7 +73,7 @@
                         <nuxt-link to="/">Home</nuxt-link>
                       </li>
                       <li>
-                        <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                        <nuxt-link to="/categories-post">Categories</nuxt-link>
                       </li>
                       <li>
                         <nuxt-link to="/single-post">Single Articles</nuxt-link>
@@ -91,7 +91,7 @@
                             <nuxt-link to="/">Home</nuxt-link>
                           </li>
                           <li>
-                            <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                            <nuxt-link to="/categories-post">Categories</nuxt-link>
                           </li>
                           <li>
                             <nuxt-link to="/single-post">Single Articles</nuxt-link>
@@ -109,12 +109,12 @@
                   <li><a href="#">Mega Menu</a>
                     <div class="megamenu">
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Catagories</li>
+                        <li class="title">Categories</li>
                         <li>
                           <nuxt-link to="/">Home</nuxt-link>
                         </li>
                         <li>
-                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                          <nuxt-link to="/categories-post">Categories</nuxt-link>
                         </li>
                         <li>
                           <nuxt-link to="/single-post">Single Articles</nuxt-link>
@@ -127,12 +127,12 @@
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Catagories</li>
+                        <li class="title">Categories</li>
                         <li>
                           <nuxt-link to="/">Home</nuxt-link>
                         </li>
                         <li>
-                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                          <nuxt-link to="/categories-post">Categories</nuxt-link>
                         </li>
                         <li>
                           <nuxt-link to="/single-post">Single Articles</nuxt-link>
@@ -145,12 +145,12 @@
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Catagories</li>
+                        <li class="title">Categories</li>
                         <li>
                           <nuxt-link to="/">Home</nuxt-link>
                         </li>
                         <li>
-                          <nuxt-link to="/catagories-post">Catagories</nuxt-link>
+                          <nuxt-link to="/categories-post">Categories</nuxt-link>
                         </li>
                         <li>
                           <nuxt-link to="/single-post">Single Articles</nuxt-link>
@@ -197,17 +197,14 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="#">Politics</a></li>
-                  <li><a href="#">Breaking News</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Technology</a></li>
-                  <li><a href="#">Health</a></li>
-                  <li><a href="#">Travel</a></li>
-                  <li><a href="#">Sports</a></li>
+                  <li v-for="category in $store.state.categories">
+                    <a href="#">{{ category.title }}</a>
+                  </li>
                   <li>
                     <nuxt-link to="/contact">Contact</nuxt-link>
                   </li>
                 </ul>
+
               </div>
               <!-- Nav End -->
             </div>
@@ -219,12 +216,18 @@
 </template>
 <script>
   export default {
-    name: 'Navbar'
+    // data() {
+    //   return {
+    //     categories: ''
+    //   }
+    // },
+    // async asyncData({store, params}) {
+    //   let {data} = await api.get("article/");
+    //   let res = await api.get("category")
+    //   return {article: data, categories: res.data};
+    // },
   }
 </script>
 <style>
-  .nav-title{
-    color: #fff;
-    font-weight:bold;
-  }
+
 </style>
