@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ul id="example-1">
+      <li v-for="category in categories">
+        {{ category.title }}
+      </li>
+    </ul>
     <div class="hero-area">
       <div class="container">
         <div class="row align-items-center">
@@ -627,7 +632,11 @@
   import Logo from '~/components/Logo.vue'
 
   export default {
-
+    async asyncData({store, params}) {
+      let {data} = await api.get("article/");
+      let res = await api.get("category")
+      return {article: data, categories: res.data};
+    },
     components: {
       Logo
     }

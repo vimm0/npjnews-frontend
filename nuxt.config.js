@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: 'universal',
@@ -57,8 +58,12 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
-
+  plugins: [
+    {src: '~/plugins/axios.js'},
+  ],
+  env: {
+    API_URL: isDev ? 'http://127.0.0.1:8000/' : 'https://npjnewsportal.com/'
+  },
   /*
   ** Nuxt.js modules
   */
