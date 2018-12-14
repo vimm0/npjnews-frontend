@@ -2,15 +2,12 @@
   <div>
     <Navbar></Navbar>
     <nuxt/>
-    <!--<Footer></Footer>-->
-    <!--&lt;!&ndash;The client-side rendered virtual DOM tree is not matching server-rendered content.&ndash;&gt;-->
-    <no-ssr>
-      <script src="js/jquery/jquery-2.2.4.min.js"></script>
-      <script src="js/bootstrap/popper.min.js"></script>
-      <script src="js/bootstrap/bootstrap.min.js"></script>
-      <script src="js/plugins/plugins.js"></script>
-      <script src="js/active.js"></script>
-    </no-ssr>
+    <Footer></Footer>
+    <!--<no-ssr>-->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <!--</no-ssr>-->
   </div>
 </template>
 <script>
