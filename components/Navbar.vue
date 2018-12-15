@@ -197,8 +197,8 @@
                       </div>
                     </div>
                   </li>
-                  <li v-for="category in $store.state.categories">
-                    <a href="#">{{ category.title }}</a>
+                  <li v-for="cat in $store.state.categories">
+                    <nuxt-link :to="{name: 'category-slug', params: {slug: cat.slug}}">{{ cat.title }}</nuxt-link>
                   </li>
                   <li>
                     <nuxt-link to="/contact">Contact</nuxt-link>

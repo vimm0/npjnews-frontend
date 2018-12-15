@@ -1,7 +1,18 @@
 <template>
   <div>
     <Navbar></Navbar>
+    <!--<div class="blog-area section-padding-0-80">-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!--<div class="col-12 col-lg-8">-->
     <nuxt/>
+    <!--</div>-->
+    <!--<div class="col-12 col-lg-4">-->
+    <!--<sidebar></sidebar>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <Footer></Footer>
     <!--<no-ssr>-->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
@@ -13,6 +24,7 @@
 <script>
   import Navbar from '@/components/Navbar.vue'
   import Footer from '@/components/Footer.vue'
+  import Sidebar from '@/components/Sidebar.vue'
 
   export default {
     data() {
@@ -23,6 +35,7 @@
     },
     components: {
       Navbar,
+      Sidebar,
       Footer
     }
   }
