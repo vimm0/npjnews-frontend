@@ -49,7 +49,7 @@
                 <div class="single-blog-post featured-post"
                      v-for="(article, index) in $store.state.articles.slice(3,4)">
                   <div class="post-thumb">
-                    <a href="#"><img :src="`img/bg-img/${16+index}.jpg`" alt=""></a>
+                    <nuxt-link :to="{name: 'article-slug', params: {slug: article.date_url, pk: article.id}}"><img :src="`img/bg-img/${16+index}.jpg`" alt=""></nuxt-link>
                   </div>
                   <div class="post-data">
                     <a href="#" class="post-catagory" v-for="cat_title in article.category">{{cat_title}}</a>
