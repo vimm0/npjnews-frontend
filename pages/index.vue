@@ -11,7 +11,7 @@
               </div>
               <div id="breakingNewsTicker" class="ticker">
                 <ul>
-                  <li v-for="news in $store.state.breakingNews"><a href="#">{{ news.title }}</a></li>
+                  <li v-for="news in $store.state.breakingNews"><nuxt-link :to="{name: 'article-slug-id', params: {slug: news.date_url, id: news.id}}">{{ news.title }}</nuxt-link></li>
                 </ul>
               </div>
             </div>
@@ -23,7 +23,7 @@
               </div>
               <div id="internationalTicker" class="ticker">
                 <ul>
-                  <li v-for="news in $store.state.internationalNews"><a href="#">{{news.title}}</a></li>
+                  <li v-for="news in $store.state.internationalNews"><nuxt-link :to="{name: 'article-slug-id', params: {slug: news.date_url, id: news.id}}">{{news.title}}</nuxt-link></li>
                 </ul>
               </div>
             </div>
@@ -49,15 +49,15 @@
                 <div class="single-blog-post featured-post"
                      v-for="(article, index) in $store.state.articles.slice(3,4)">
                   <div class="post-thumb">
-                    <nuxt-link :to="{name: 'article-slug', params: {slug: article.date_url, pk: article.id}}"><img :src="`img/bg-img/${16+index}.jpg`" alt=""></nuxt-link>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${16+index}.jpg`" alt=""></nuxt-link>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{cat_title}}</a>
-                    <a href="#" class="post-title">
+                    <nuxt-link :to="{name: 'category-slug', params: {slug: cat.slug}}" class="post-catagory" v-for="cat in article.category" :key="cat.slug">{{cat.title}}</nuxt-link>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                       <h6>{{article.title}}</h6>
-                    </a>
+                    </nuxt-link>
                     <div class="post-meta">
-                      <p class="post-author">By <a href="#">{{article.reporter}}</a></p>
+                      <p class="post-author">By <nuxt-link :to="{name: 'reporter-slug', params: {slug: article.reporter.slug}}">{{article.reporter.name}}</nuxt-link></p>
                       <p class="post-excerp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit
                         amet odio sodales placerat. Sed varius leo ac leo fermentum, eu cursus nunc maximus. Integer
                         convallis nisi nibh, et ornare neque ullamcorper ac. Nam id congue lectus, a venenatis massa.
@@ -77,14 +77,14 @@
                 <div class="single-blog-post featured-post-2"
                      v-for="(article, index) in $store.state.articles.slice(0,2)">
                   <div class="post-thumb">
-                    <a href="#"><img :src="`img/bg-img/${17+index}.jpg`" alt=""></a>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${17+index}.jpg`" alt=""></nuxt-link>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
+                    <nuxt-link :to="{name: 'category-slug', params: {slug: cat.slug}}"  class="post-catagory" v-for="cat in article.category" :key="cat.slug">{{ cat.title }}</nuxt-link>
                     <div class="post-meta">
-                      <a href="#" class="post-title">
+                      <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                         <h6>{{article.title}}</h6>
-                      </a>
+                      </nuxt-link>
                       <!-- Post Like & Post Comment -->
                       <div class="d-flex align-items-center">
                         <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
@@ -101,14 +101,14 @@
             <!-- Single Featured Post -->
             <div class="single-blog-post small-featured-post d-flex" v-for="(article, index) in $store.state.articles">
               <div class="post-thumb">
-                <a href="#"><img :src="`img/bg-img/${19+index}.jpg`" alt=""></a>
+                <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${19+index}.jpg`" alt=""></nuxt-link>
               </div>
               <div class="post-data">
-                <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
+                <nuxt-link :to="{name: 'category-slug', params: {slug: cat.slug}}" class="post-catagory" v-for="cat in article.category" :key="cat.slug">{{cat.title}}</nuxt-link>
                 <div class="post-meta">
-                  <a href="#" class="post-title">
+                  <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                     <h6>{{ article.title }}</h6>
-                  </a>
+                  </nuxt-link>
                   <!--<p class="post-date">{{ new Date(article.created) }}</p>-->
                   <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
                 </div>
@@ -131,13 +131,13 @@
               <div class="col-12 col-md-6" v-for="(article, index) in $store.state.articles.slice(0,4)">
                 <div class="single-blog-post style-3">
                   <div class="post-thumb">
-                    <a href="#"><img :src="`img/bg-img/${12 + index}.jpg`" alt=""></a>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${12 + index}.jpg`" alt=""></nuxt-link>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-catagory" v-for="cat_title in article.category">{{ cat_title }}</a>
-                    <a href="#" class="post-title">
+                    <nuxt-link :to="{name: 'category-slug', params: {slug: cat.slug}}"  class="post-catagory" v-for="cat in article.category" :key="cat.slug">{{cat.title}}</nuxt-link>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                       <h6>{{ article.title }}</h6>
-                    </a>
+                    </nuxt-link>
                     <div class="post-meta d-flex align-items-center">
                       <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
                       <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
@@ -158,9 +158,9 @@
 
               <!-- Single Popular Blog -->
               <div class="single-popular-post" v-for="(article, index) in $store.state.articles.slice(0,4)">
-                <a href="#">
+                <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}">
                   <h6><span>{{ `${index+1}` }}</span>{{article.title}}</h6>
-                </a>
+                </nuxt-link>
                 <p>April 14, 2018</p>
               </div>
             </div>
@@ -233,12 +233,12 @@
               <div class="col-12 col-lg-4" v-for="(article, index) in $store.state.articles">
                 <div class="single-blog-post">
                   <div class="post-thumb">
-                    <a href="#"><img :src="`img/bg-img/${1 + index}.jpg`" alt=""></a>
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${1 + index}.jpg`" alt=""></nuxt-link>
                   </div>
                   <div class="post-data">
-                    <a href="#" class="post-title">
+                    <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                       <h6>{{article.title}}</h6>
-                    </a>
+                    </nuxt-link>
                     <div class="post-meta">
                       <div class="post-date"><a href="#">February 11, 2018</a></div>
                     </div>
@@ -257,12 +257,12 @@
             <!-- Single Post -->
             <div class="single-blog-post style-2" v-for="(article, index) in $store.state.articles.slice(0,5)">
               <div class="post-thumb">
-                <a href="#"><img :src="`img/bg-img/${7 + index}.jpg`" alt=""></a>
+                <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}"><img :src="`img/bg-img/${7 + index}.jpg`" alt=""></nuxt-link>
               </div>
               <div class="post-data">
-                <a href="#" class="post-title">
+                <nuxt-link :to="{name: 'article-slug-id', params: {slug: article.date_url, id: article.id}}" class="post-title">
                   <h6>{{article.title}}</h6>
-                </a>
+                </nuxt-link>
                 <div class="post-meta">
                   <div class="post-date"><a href="#">February 11, 2018</a></div>
                 </div>
@@ -303,12 +303,12 @@
       return {article: data, categories: cat.data};
     },
     created() {
-      let url = "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=a9eac86b961ece1768b402204cc02d63";
-      axios
-        .get(url)
-        .then(response => {
-          console.log(response)
-        })
+      // let url = "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=a9eac86b961ece1768b402204cc02d63";
+      // axios
+      //   .get(url)
+      //   .then(response => {
+      //     console.log(response)
+      //   })
     },
     components: {
       Logo
