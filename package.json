@@ -17,7 +17,7 @@
     "bootstrap-vue": "^2.0.0-beta",
     "cross-env": "^5.2.0",
     "install": "^0.12.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "npm": "^6.5.0",
     "nuxt": "^2.0.0",
     "vue-jquery": "^1.0.6",
